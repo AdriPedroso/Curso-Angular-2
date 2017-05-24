@@ -1,20 +1,16 @@
 
+let nombre:string  = "Juan";
+let apellido:string = "Perez";
+let edad:number = 32;
+
 /*
- *  Hay que especificar el tipo de variable  
- */
+* Nos ayudan a reducir las líneas de código a la hora de montar una cadena de texto
+*/
+//En vez de ser asi: 
+//let texto = "Hola " + nombre + " " + apellido + " " + edad;
+//Quedaría asi:
+let texto = `Hola, ${ nombre } ${ apellido } ${ edad }`;
 
-//tipo string
-let nombre:string = "Adri";
-//Tipo number
-let numero:number = 123;
-//Tipo boolean
-let booleano:boolean = true;
-//Tipo Date
-let fecha:Date = new Date();
-//Tipo any - Quiere decir que la variable de este tipo puede recibir cualquier tipo de variable anterior nombrada
-let cualquiera:any;
+/*Incluso podemos poner intros dentro de la cadena siempre y cuando las comillas esten correctas */
 
-cualquiera = nombre;
-cualquiera = numero;
-cualquiera = booleano;
-cualquiera = fecha;
+console.log(texto);
