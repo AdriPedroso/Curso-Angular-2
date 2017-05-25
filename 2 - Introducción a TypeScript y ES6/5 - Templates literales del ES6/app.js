@@ -7,5 +7,8 @@ var edad = 32;
 //En vez de ser asi: 
 //let texto = "Hola " + nombre + " " + apellido + " " + edad;
 //Quedaría asi:
-var texto = "Hola, " + nombre + " " + apellido + " (" + edad + ")";
+var texto = "Hola, " + nombre + " " + apellido + " " + edad;
 console.log(texto);
+/*Incluso podemos poner intros dentro de la cadena siempre y cuando las comillas esten correctas */
+var texto2 = "Hola, \n" + nombre + " \n" + apellido + " " + edad;
+console.log(texto2);

@@ -11,6 +11,12 @@ let edad:number = 32;
 //Quedaría asi:
 let texto = `Hola, ${ nombre } ${ apellido } ${ edad }`;
 
+console.log(texto);
+
 /*Incluso podemos poner intros dentro de la cadena siempre y cuando las comillas esten correctas */
 
-console.log(texto);
+let texto2 = `Hola, 
+${ nombre } 
+${ apellido } ${ edad }`;
+
+console.log(texto2);
