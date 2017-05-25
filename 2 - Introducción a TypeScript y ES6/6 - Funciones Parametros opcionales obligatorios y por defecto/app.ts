@@ -26,4 +26,4 @@ function activar( quien:string,
 
 }
 
-activar("Gordon", "batseñal", "tarde");
+activar("Gordon", "batseñal", "tarde"); 
