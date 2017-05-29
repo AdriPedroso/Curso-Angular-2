@@ -9,3 +9,10 @@
 - Crear archivos .HTML para que se encarguen de la estructura visual de nuestros componentes.
 - Crearemos una aplicación con 3 componentes re-utilizables.
 - *ngFor y el *ngIf
+
+
+Componentes:	Son pequeñas clases que cumplen una tarea especifica (menu, barra latera, mostrador de información, pie de página). Son clases normales con un decorador especifico.
+
+Directivas estructurales: Son instrucciones que le dicen al html lo que tiene que hacer
+		ngIf (true/false)-> Muestra/Oculta elementos del html
+		ngFor --> Se encarga de mostrar repetidamente elementos en nuestra página html
