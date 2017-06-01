@@ -7,12 +7,54 @@
 - Una breve introducción sobre todos los archivos usados en el QuickStart de Angular.
 - Uso de Bootstrap 4 para nuestros estilos.
 - Crear archivos .HTML para que se encarguen de la estructura visual de nuestros componentes.
-- Crearemos una aplicación con 3 componentes re-utilizables.
+- Crearemos una aplicación con 3 componentes re-utilizables (header, body, footer).
 - *ngFor y el *ngIf
-
+- Interpolar valores de variables al html
 
 Componentes:	Son pequeñas clases que cumplen una tarea especifica (menu, barra latera, mostrador de información, pie de página). Son clases normales con un decorador especifico.
 
 Directivas estructurales: Son instrucciones que le dicen al html lo que tiene que hacer
 		ngIf (true/false)-> Muestra/Oculta elementos del html
 		ngFor --> Se encarga de mostrar repetidamente elementos en nuestra página html
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+1.- Para que el proyecto no compile dos veces tenemos que añadir la siguientes comandos al fichero tsconfig.json
+
+	"compileOnSave":false,
+	  "exclude":[
+	    "node_modules"
+	  ]
+
+2.- Estructura de un proyecto:
+
+.git --> Esta carpeta oculta mantiene el rastro para el github (se puede boorrar)
+app --> Contiene toda la información de la aplicación
+e2e --> Sirve para hacer pruebas
+node_modulos --> Todas las dependencias se instalan aqui
+
+index.html --> es la aplicación que se muestra en pantalla (la web)
+
+package.json --> Aqui indicamos las dependencias del proyecto
+
+3.- Utilizando Bootstrap
+
+Vamos a utilizar Bootstrap en todos nuestros proyectos.
+
+Vamos a crear un header, para ello vemos la documentación de bootstrap y cogemos el código del navbar
+En nuestro proyecto creamos una carpeta "components" dentro, un archivo llamado "header.component.ts"
+De esta manera vamos a crear nuestro primer componente.
+
+Todos los componentes tienen la siguiente estructura con el import
+  
+  
+    import { Component } from '@angular/core';
+    @Component({
+    selector: 'my-app',
+    template: `<h1>Hello {{name}}</h1>`
+    })
+    export class AppComponent { name = 'Angular'; }
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
