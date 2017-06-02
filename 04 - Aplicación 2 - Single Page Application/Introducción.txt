@@ -1,0 +1,74 @@
+- Crearemos una aplicación de una sola página (Single Page Application)
+- Creación de proyectos de Angular usando el CLI (Command Line Interface)
+- Instalando bootstrap o librerías de terceros usando el Angular-CLI
+- Creación de rutas de nuestra aplicación
+- Uso de RouterLink y RouterLinkActive para movernos de página y colocar clases a los elementos activos.
+- Uso del modulo Router, que nos permite movernos de página mediante código.
+- Obtención de parámetros vía URL.
+- Configuración de nuestro primer servicio en Angular para el manejo de la data.
+- Breve introducción a los Pipes 
+- Uso del buscador del navbar para realizar una consulta a nuestro array de datos.
+
+
+//////////////////////////////ANGULAR CLI////////////////////////////////////////////
+
+
+Crearemos una aplicación de la siguiente manera:
+
+	ng new NOMBRE_PROYECTO
+
+Esto nos creara el proyecto completo, incluso descargará todas las dependencias del packaje.json
+Eso nos ahorra hacer un npm install. Depués vamos al directorio:
+
+	cd NOMBRE_PROYECTO
+
+Y arrancamos y compilamos el servidor con:
+
+	ng serve
+
+Y nuestro servidor estrá levantado en la dirección:
+
+	localhost:4200
+
+
+//////////////////////////ESTRUCTURA PROYECTO//////////////////////////////////////////
+
+Para crear un componente sería:
+
+ng g component RUTA_DEL_COMPOENENTE(components/shared/navbar)
+
+Esto nos crea el componente y lo mete en todos los ficheros necesarios para su funcionamiento
+
+/////////////////////////INSTALANDO BOOSTSTRAP CON ANUGLAR CLI////////////////////////////////
+
+
+ 	npm install bootstrap@4.0.0-alpha.6 --save 
+
+ -El --save sirve para que lo añada en las dependencias del paquete
+
+ - Hacemos lo Mismo con Jquery
+
+  	npm install jquery --save
+
+ - Y lo mismo con:
+
+ 	npm install tether --save
+
+ Bootstrap requiere de estas tres cosas.
+
+ Y tenemos que poner las dependecias en el fichero .angular-cli.jason:
+
+ 	En la parte de styles:
+
+ 		"../node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+ 	En la parte scripts:
+
+ 		"../node_modules/jquery/dist/jquery.slim.min.js"  --> JQUERY
+ 		"../node_modules/tether/dist/js/tether.min.js" --> Tether
+ 		"../node_modules/bootstrap/dist/js/bootstrap.min.js" --> Bootstrap
+
+
+Todo esto es necesario para que nos funcione correctamente Bootstrap. 
+
+IMPORTANTE : TIENE QUE PONERSE LAS DEPENDENCIAS EN ORDEN
