@@ -72,3 +72,35 @@ Esto nos crea el componente y lo mete en todos los ficheros necesarios para su f
 Todo esto es necesario para que nos funcione correctamente Bootstrap. 
 
 IMPORTANTE : TIENE QUE PONERSE LAS DEPENDENCIAS EN ORDEN
+
+
+/////////////////////////RUTAS////////////////////////////////////
+
+En HTML si tenemos dos propiedades:
+
+	[routerLink]="['ruta_que_sea']" --> Aqui ponemos la ruta declarada en el fichero app.routes.ts
+
+Y usaremos para que se marque el nav la ruta activa de la siguiente manera:
+
+	routerLinkActive="active"
+
+///////////////////////////SERVICIOS/////////////////////////////////////
+
+Utilizaremos un servicio para rellenar las tarjetas de nuestra aplicación a través de un fichero "data.txt"
+
+Nos crearemos un servicio llamado Héores que aportará los datos de cada uno.
+
+Los servicios:
+
+	- Brindan información a quien lo necesite.
+	- Realizar peticiones CRUD (Create, Read, Update, Delete).
+	- Mantener los datos de forma persistente.
+	- Servir como recurso re-utilizable para nuestra aplicación.
+
+
+Crearemos una carpeta donde crearemos los servicios
+Una vez creado lo tenemos que declarar en el fichero app.module.ts
+
+/////////////////////RUTAS CON PARAMETROS//////////////////////////////////////
+
+Cuando pinchemos en el botón "ver más.." abriremos una nueva página mostrando todos los datos a traves de rutas con parámetros
