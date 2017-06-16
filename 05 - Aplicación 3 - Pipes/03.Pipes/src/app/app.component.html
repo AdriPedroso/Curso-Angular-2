@@ -1,0 +1,150 @@
+<div class="container">
+
+  <br>
+  <h1>Pipes</h1>
+  <hr>
+
+  <table class="table ">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Variable</th>
+        <th>Pipe</th>
+        <th>Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td> {{ nombre }} </td>
+        <td class="table-active"> uppercase </td>
+        <td> {{ nombre | uppercase }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ nombre }} </td>
+        <td class="table-active"> lowercase </td>
+        <td> {{ nombre | lowercase }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ nombre }} </td>
+        <td class="table-active"> Slice:3 </td>
+        <td> {{ nombre | slice:3 }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ nombre }} </td>
+        <td class="table-active"> Slice:0:3 </td>
+        <td> {{ nombre | slice:0:3 }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ array }} </td>
+        <td class="table-active"> Slice:1:5 </td>
+        <td> {{ array | slice:1:5 }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ PI }} </td>
+        <td class="table-active"> number:'3.0-0' </td>
+        <td> {{ PI | number:'3.0-0' }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ PI }} </td>
+        <td class="table-active"> number:'1.0-2' </td>
+        <td> {{ PI | number:'1.0-2' }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ a }} </td>
+        <td class="table-active"> percent </td>
+        <td> {{ a | percent }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ a }} </td>
+        <td class="table-active"> percent:'2.2-2' </td>
+        <td> {{ a | percent:'2.2-2' }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ salario }} </td>
+        <td class="table-active"> currency:'EUR' </td>
+        <td> {{ salario | currency:'EUR' }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ salario }} </td>
+        <td class="table-active"> currency:'EUR':true </td>
+        <td> {{ salario | currency:'EUR':true }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ salario }} </td>
+        <td class="table-active"> currency:'EUR':true:'4.0-0' </td>
+        <td> {{ salario | currency:'EUR':true:'4.0-0' }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ salario }} </td>
+        <td class="table-active"> number:'.2-2' </td>
+        <td> {{ salario | number:'.2-2' }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ valorDePromesa }} </td>
+        <td class="table-active"> async </td>
+        <td> {{ valorDePromesa | async }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ fecha }} </td>
+        <td class="table-active"> date </td>
+        <td> {{ fecha | date }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ fecha }} </td>
+        <td class="table-active"> date:'medium' </td>
+        <td> {{ fecha | date:'medium' }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ fecha }} </td>
+        <td class="table-active"> date:'MMMM - dd' </td>
+        <td> {{ fecha | date:'MMMM - dd' }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ nombre2 }} </td>
+        <td class="table-active"> capitalizado </td>
+        <td> {{ nombre2 | capitalizado }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ nombre2 }} </td>
+        <td class="table-active"> capitalizado:false </td>
+        <td> {{ nombre2 | capitalizado:false }} </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h4>Slice</h4>
+  <ul>
+    <li *ngFor="let item of array | slice:5:20"> {{ item }} </li>
+  </ul>
+
+  <hr>
+  <h4>JSON</h4>
+  <pre>{{ heroe | json }}</pre>
+  <!--pre es una etiqueta de bootstrap-->
+
+  <h4>Youtube <small>video</small></h4>
+  <hr>
+  <iframe width="560" height="315" [src]="video | domseguro:'https://www.youtube.com/embed/'" frameborder="0" allowfullscreen></iframe>
+
+</div>
