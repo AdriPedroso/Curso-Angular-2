@@ -1,0 +1,66 @@
+Como hacer...(normalmente se incluyen en un servicio y se hacen llamadas a él en los componentes)
+
+POST (enviar información):
+
+  nuevoHeroe ( heroe: Heroe ) {
+
+    let body = JSON.stringify( heroe ); // Esto nos forma el string de un json en un formato válido
+    let headers = new Headers ({
+      'Content-Type' : 'application/json'
+    });
+
+    return this.http.post( this.heroesURL, body, { headers })
+      .map( res => {
+        console.log (res.json());
+        return res.json();
+      })
+
+  }
+	
+
+Es un servicio que envía a la base de datos un nuevo elemento, la variable body va a generar el json con formato valido. 
+El headers va a ser la cabezera del json
+Al hacer el post enviamos la URL + El cuerpo formado del JSON + Cabecera
+El body se sacan los datos dentro del componente donde llamamos al servicio
+
+PUT (Actualizar un registro):
+
+
+  actualizarHeroe ( heroe: Heroe, key$: string ) {
+
+        let body = JSON.stringify( heroe ); // Esto nos forma el string de un json en un formato válido
+        let headers = new Headers ({
+          'Content-Type' : 'application/json'
+        });
+
+        let url = `${this.heroeURL }/${ key$ }.json`; // Aquí completamos concatenando la url del héroe que queremos actualizar
+
+        return this.http.put( url, body, { headers })
+          .map( res => {
+            console.log (res.json());
+            return res.json();
+          });
+
+   }
+
+  La lógica y los parámetros se completan desde el componente al igual que en el post
+
+
+ GET (Recibir información):
+
+    getHeroe ( key$: string ) {
+
+     let url = `${ this.heroeURL }/${ key$ }.json`;
+
+     return this.http.get ( url )
+        .map ( res => res.json() );
+
+   }
+
+
+La lógica está en el componente
+
+DELETE (Eliminar elementos):
+
+
+
